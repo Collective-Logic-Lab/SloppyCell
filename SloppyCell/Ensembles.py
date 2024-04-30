@@ -124,7 +124,7 @@ def ensemble_log_params(m, params, hess=None,
         seeds = int(time.time()%1 * 1e6)
         logger.debug('Seeding random number generator based on system time.')
         logger.debug('Seed used: %s' % str(seeds))
-    scipy.random.seed(seeds)
+    np.random.seed(seeds)
     if isinstance(params, KeyedList):
         param_keys = params.keys()
 
